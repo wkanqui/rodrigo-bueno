@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rodrigo, el Potro</title>
+<!--Llamo a la hoja de estilo y a las fuentes; en principio a tres fuentes-->
+    <link rel="stylesheet" href="http://127.0.0.1:5500/styles.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Dosis|Fira+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Barlow&display=swap" rel="stylesheet">
+</head>
+<!--En principio, ordené todo en distintos div, que utilo como "cajas", todas, siempre con una class para después trabajar los estilos-->
+<body>
+    <!--Esta es la primera, será la barra de navegación, el menú principal, con anclas dentro del documento-->
+    <div class="nav">
+        <!--Primero, antes del menú propiamente dicho hice una imagen para llevarla como "logo"-->
+        <img class="loguito" src="images/negrito.svg" alt="ícono">
+        <!--Este "label" sirve para armar el menú hamburguesa... &#9776; es el símbolo del menú hamburguesa, que va ligado al id del checkbox que activará el menú en pantallas chicas-->
+        <label for="toggle">&#9776;</label>
+        <input type="checkbox" name="" id="toggle">
+            <!--Este es el menú propiamente dicho-->
+            <div class="menu">
+                <a class="men" href="#biografia">Biografia</a>
+                <a class="men" href="#discos">Últimos discos</a>
+                <a class="men" href="#spotify">Spotify</a>
+                <a class="men" href="#youtube"> <span>Video</span></a>
+            </div>
+    </div>
+    <!--Y ahora sí, empieza el contenido. Armé una caja genérica, "contenido" y luego fui creando las cajas (los divs) secundarias.-->
+    <div class="contenido">
+        <div class="titulo">
+            <h1 id="puntocero">Rodrigo Bueno, el Potro</h1>
+            <!--En realidad, la etiqueta "figure", según descubrí leyendo se usa para agilizar la presentación de imágenes y descripción, pero la probé como contendor de mi video y funcionó-->    
+            <figure class="intro">
+                <video src="assets/videos/intro.mp4" type="video/mp4" autoplay loop>No se puede cargar.</video>
+            </figure>
+            <!--La idea fue que aparezca un video (que edité con tres secuencias distintas de YouTube) y encima una cajita haciendo referencia al personaje. Por eso aparece esto por afuera.-->
+            <div class="textoprincipal">
+            <h3>Rodrigo Bueno</h3>
+            <h4> <span>1973-2000</span> </h4>
+            <h4></h4>
+            </div>
+        </div>
+        <!--Acá comienzan las "secciones", cada vez que pongo la clase "bio" en los div, arranca una seccion. La clase me sirve para darle formato al inicio de la sección-->
+        <div class="general"> 
+            <div class="gral">
+                <div class="bio" id="biografia">
+                <h2 class="bio">Biografía</h2>
+                <br>
+                    <div class="textobio">
+                    <p class="parrafo">Rodrigo Alejandro Bueno nació en Córdoba, el 24 de mayo de 1976. Hijo de Pichín Bueno y Beatriz Olave, Rodrigo se mostró muy apasionado por la música desde pequeño.</p> 
+                    <p class="parrafo">Sus comienzos en el mundo de la música se dieron en la adolescencia cuando, apuntalado por su padre, armó un grupo y, tras algunos meses de exposición en la capital cordobesa, se fue a Buenos Aires.</p> 
+                    <p class="parrafo">Allí, en el gran Buenos Aires, "el Potro", como lo apodaban, tuvo su mayor desarrollo.</p> 
+                    <p class="parrafo">Abanderado bajo el ala del cuarteto característico, Rodrigo firmó un acuerdo con Polygram para sacar sus primeros discos, y la repercusión fue muy buena.</p> 
+                    <p class="parrafo">Sin embargo, su carrera se vio truncada cuando, en 1996, su padre sufrió una insuficiencia cardíaca y falleció en las vísperas de un show.</p> 
+                    <p class="parrafo">Fue entonces que Rodrigo regresó a Córdoba para acobijarse en la casa de su madre "Betty".</p> 
+                    <p class="parrafo">Recién en 1998, con el paraguas del nuevo sello Magenta (propiedad de José Luis Gozalo), Rodrigo reinició su carrera.</p> 
+                    <p class="parrafo">El ascenso no tuvo límites: jornadas maratónicas por los medios de comunicación, media docena de shows de promedio por día y un sinfin de negocios relacionados a sus canciones hicieron que el ritmo se vuelva casi irreal.</p> 
+                    <p class="parrafo">Después de haber completado 13 noches de recitales en el mítico Estadio Luna Park, "el Potro" sorprendió al anunciar su retiro de la actividad.
+                    Aquel anuncio se dio en una conferencia de prensa, en la que el cantante cordobés aseguró que se despediría con un show doble en River.</p> 
+                    <p class="parrafo">Sin embargo, poco tiempo después, el 24 de junio de 2000, Rodrigo falleció luego de sufrir un siniestro vial.</p> 
+                    </div>
+                    <br>
+                </div>
+            <div class="espaciodisco" id="discos">
+                <h2 class="bio">Últimos discos</h2>
+            <div class="discouno">
+                <div class="titdisco">
+                    <h5>Lo mejor del amor <span class="cd">(1996)</span></h5>
+                </div>
+                <div class="temas">
+                    <div class="elemento">
+                    <img class="disco" src="images/discos/lomejordelamor.jpg" alt=""> 
+                    </div>
+                    <div class="elemento">
+                    <ul>
+                        <li class="listado">01 El Divorcio</li>
+                        <li class="listado">02 Lo mejor del amor</li>
+                        <li class="listado">03 Himno del cucumelo</li>
+                        <li class="listado">04 Bailando con la gorda</li>
+                        <li class="listado">05 El amor de esa mujer</li>
+                        <li class="listado">06 Negro José</li>
+                        <li class="listado">07 El muñeco</li>
+                        <li class="listado">08 Nunca más</li>
+                        <li class="listado">09 Me quiere, no me quiere</li>
+                        <li class="listado">10 Alarma</li>
+                        <li class="listado">11 Qué mujer</li>
+                        <li class="listado">12 La humanidad/Quiero tu boca</li>
+                        <li class="listado">13 Y si yo la celo</li>
+                        <li class="listado">14 El mambo, la rumba</li>
+                        <li class="listado">15 El divorcio (Karaoke)</li>
+                    </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="discouno">
+                <div class="titdisco">
+                    <h5>La leyenda continúa <span class="cd">(1997)</span></h5>
+                </div>
+                <div class="temas">
+                    <div class="elemento">
+                    <img class="disco" src="images/discos/laleyendacontinua.jpg" alt="">
+                    </div>
+                    <div class="elemento">
+                    <ul>
+                        <li class="listado">01 Amor de alquiler</li>
+                        <li class="listado">02 El potro</li>
+                        <li class="listado">03 Amor de 7mo grado</li>
+                        <li class="listado">04 El chivo/La cerveza</li>
+                        <li class="listado">05 Tomo me lleva a tí</li>
+                        <li class="listado">06 La chica de mi barrio</li>
+                        <li class="listado">07 El reloj</li>
+                        <li class="listado">08 La trampa</li>
+                        <li class="listado">09 El cuartetero y Mariana</li>
+                        <li class="listado">10 La novia de Díos</li>
+                        <li class="listado">11 Me extrañarás</li>
+                        <li class="listado">12 La batatita</li>
+                        <li class="listado">13 Informe policial</li>
+                        <li class="listado">14 Lo mejor del amor</li>
+                    </ul>
+                    </div>
+                </div>
+            </div> 
+            <div class="discouno">
+                <div class="titdisco">
+                    <h5>Cuarteteando <span class="cd">(1998)</span></h5>
+                </div>
+                <div class="temas">
+                    <div class="elemento">
+                    <img class="disco" src="images/discos/cuarteteando.jpg" alt="">
+                    </div>
+                    <div class="elemento">
+                    <ul>
+                        <li class="listado">01 Si tú supieras</li>
+                        <li class="listado">02 Cuarteteando/Atájenla</li>
+                        <li class="listado">03 Y voló, voló</li>
+                        <li class="listado">04 La gata y el ratón</li>
+                        <li class="listado">05 En libertad</li>
+                        <li class="listado">06 El lecho vacío</li>
+                        <li class="listado">07 Ocho cuarenta</li>
+                        <li class="listado">08 Señora de madrugada</li>
+                        <li class="listado">09 La sorda y el sordo</li>
+                        <li class="listado">10 En mi cama una cualquiera</li>
+                    </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="discouno">
+                <div class="titdisco">
+                    <h5>El Potro <span class="cd">(1999)</span></h5>
+                </div>
+                <div class="temas">
+                    <div class="elemento">
+                    <img class="disco" src="images/discos/elpotro.jpg" alt="">
+                    </div>
+                    <div class="elemento">
+                    <ul>
+                        <li class="listado">01 La chica de mi barrio</li>
+                        <li class="listado">02 Ocho cuarenta</li>
+                        <li class="listado">03 Boby</li>
+                        <li class="listado">04 Marta</li>
+                        <li class="listado">05 Ella toca el clarinete</li>
+                        <li class="listado">06 María chuzena</li>
+                        <li class="listado">07 Y si yo la celo</li>
+                        <li class="listado">08 Perfidia</li>
+                        <li class="listado">09 No sé, no sé</li>
+                        <li class="listado">10 El muñeco</li>
+                        <li class="listado">11 El potro</li>
+                    </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="discouno">
+                <div class="titdisco">
+                    <h5>A 2000 <span class="cd">(2000)</span></h5>
+                </div>
+                <div class="temas">
+                    <div class="elemento">
+                    <img class="disco" src="images/discos/a2000.jpg" alt="">
+                    </div>
+                    <div class="elemento">
+                    <ul>
+                        <li class="listado">01 Yerba mala</li>
+                        <li class="listado">02 Cómo le digo</li>
+                        <li class="listado">03 Fuego y pasión</li>
+                        <li class="listado">04 Soy cordobés</li>
+                        <li class="listado">05 Qué ironía</li>
+                        <li class="listado">06 El viaje</li>
+                        <li class="listado">07 El aprendiz</li>
+                        <li class="listado">08 Amor clasificado</li>
+                        <li class="listado">09 Por vivir jugando</li>
+                        <li class="listado">10 Un largo camino al cielo</li>
+                        <li class="listado">11 Por lo que yo te quiero</li>
+                    </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <!--Acá arranca el módulo de Spotify, para ello saqué el embed (iframe) del mismo Spotify, pero le modifiqué el with, para que no sea fijo, sino que sea al 100% de la ventana (luego, en css, le di un pading para que no me "coma" toda la ventana.-->
+            <div class="spotify">
+                <h2 class="bio">La lista de Spotify</h2>
+            </div>
+            <br>
+            <div class="modulo">
+                <div class="dtres">
+                    <iframe src="https://open.spotify.com/embed/artist/235Vf4hkmwvxjVEMuCbRxm" width="100%" height="400" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>       
+                </div>
+            </div>
+            <!--Para la mostrar las fotos también cree una clase, si bien edité todas las fotos del mismo tamaño en Photoshop, supuse que, para ordenarlas luego, necesitaría una clase-->
+            <div class="galeria">
+                <h2 class="bio">Galería de imágenes inéditas:</h2>
+                <img class="fotositio" src="images/fotoa.jpg" alt="Imagen 1">
+                <img class="fotositio" src="images/fotob.jpg" alt="Imagen 1">
+                <img class="fotositio" src="images/fotoc.jpg" alt="Imagen 1">
+                <img class="fotositio" src="images/fotod.jpg" alt="Imagen 1">
+                <img class="fotositio" src="images/fotoe.jpg" alt="Imagen 1">
+                <img class="fotositio" src="images/fotof.jpg" alt="Imagen 1">
+                <img class="fotositio" src="images/fotog.jpg" alt="Imagen 1">
+            </div>
+        </div>
+    </div>
+    </div>
+    <!--Este div tiene la clase "inicio" porque tiene una "casita" que flota siempre como opción y nos recarga el sitio.-->
+    <div class="inicio">
+        <a title="Volver" href="index.html"><img class="inicio" src="images/flecha.png" alt="ir al inicio"></a>
+    </div>    
+    </form>
+    <footer>
+        <h4 class="igtv"></h4>
+        <br>
+        <iframe width="100%" height="600" src="https://www.youtube.com/embed/e325MkZ8MIc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <br>
+        <h4 class="wk">walterkanqui@gmail.com</h4>
+    </footer>
+ </body>
+</html>

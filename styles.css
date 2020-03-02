@@ -1,0 +1,227 @@
+/*Hola, mi nombre es Walter Kanqui y acá van los comentarios de las decisiones que tomé para armar el css de mi página sobre Rodrigo*/
+/*Primero opté por armar todo con divs, a los que siempre le puse clase, para tener control puntual sobre el comportamiento de mis cajas*/
+/*Al comenzar, le quité el padding y el margen al todo el sitio. El selector * llama a todo. Entonces, así, el control estaba completamente en mis manos*/
+* {
+    padding: 0px;
+    margin: 0px;
+}
+/*Color de fondo para el body*/
+body {
+    background-color: rgb(77, 77, 77);
+    
+}
+/*Para la barra hice un borde sólido, le puse with a 100% para que ocupe todo y le puse una altura, la misma que después al texto*/
+/*En cuanto a la posición, es fixed, para que se vea siempre y el z-index es para ponerlo por encima de todo, para que, por ejemplo, cuando scroleo, el video no me lo tape*/
+.nav {
+    border-bottom: 1px solid #EAEAEB;
+    width: 100%;
+    height: 70px;
+    background-color: black;
+    position: fixed;
+    z-index: 4;
+}
+/*Acá empieza el contenido del sitio, por fuera del menú, y el padding es para que se "respete" la altura del menú al principio*/
+.contenido {
+    padding-top: 70px;
+}
+/*Este margen es para el menu... aprendí que siempre si es un número, vale para los cuatro costados, si son dos números, para las duplas (arriba-abajo) (izquierda-derecha) y cuando hay cuatro como acá, arranca arriba y sigue la orientación de las agujas del reloj*/
+.menu {
+    margin: 0 30px 0 0;
+    text-align: right;
+    
+}
+/*Acá definí los estilos de los elementos del menú, las opciones digamos. el "clear" es clave para el ordenamiento cuando sea responsive, porque le dice algo así como "limpia y ordená lo que haya a la derecha". En la compu no hace diferencia, pero en el bloque movil, sí*/
+.menu a {
+    clear: right;
+    text-decoration: none;
+    color: white;
+    margin: 0 10px;
+    line-height:  70px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    
+}
+/*Como quiero resaltar el video que edite para el pie de página, por eso agregué un span colorido*/
+span {
+    color: red ;
+}
+/*El loguito va a estar siempre visible: como está dentro del "nav", así será; solo aquí le di posición*/
+.loguito {
+    display: inline-block;
+    position: absolute;
+    left: 50px;
+    width: 50px;
+    top: 10px;
+}
+/*Esto es lo más complejo quizás, pero digamos que es un rótulo para el menú hamburguesa. Es una etiqueta que se va a activar cuando la pantalla sea chica, por eso ahora el display es "none".*/
+label {
+    margin: 0 40px 0 0 ;
+    font-size: 26px;
+    line-height: 70px;
+    display: none;
+    width: 26px;
+    float: right;
+    color: whitesmoke;
+}
+#toggle {
+    display: none;
+}
+/*Acá se le dije: "Ojo, cuando la pantalla sea hasta 500 pixeles de ancho, hacé esto: el label (el rótulo de arriba) mostralo, y no solo eso, sino que el menu pasa a ser un bloque y se activa cuando el checkbox está activado, via un clic en el toggle. Para ello, una pseudoclase.*/
+@media only screen and (max-width: 500px) {
+    label {
+        display: block; 
+        cursor: pointer;
+    }
+    .menu {
+        text-align: center;
+        width: 100%;
+        display: none;
+    }
+    .menu a {
+        display: block;
+        border-bottom: 1px solid #EAEAEB;
+        margin: 0px;
+        background-color: rgba(45, 45, 45, 0.9);
+    }
+    #toggle:checked + .menu {
+        display: block;
+    }
+}    
+/*Con este "detallito" resolví el tema de que el video sea responsive.*/
+video {
+    width: 100%;
+}
+/*Como este lo oculté porque como hice una caja gris que iba sobre el video, el h1 ya no hacía falta que se muestre.*/
+h1 {
+    display: none;
+}
+p.parrafo{
+    color: white;
+    margin-left: 90px;
+    margin-right: 90px;
+    padding: 0px 0px 10px 0px;
+    font-family: 'Barlow', sans-serif;
+    font-size: 16px;
+    text-align: justify;
+}
+/*Esta es la caja gris del texto que aparce por sobre el video*/
+.textoprincipal {
+    box-sizing: content-box;
+    display: inline-block;
+    position: absolute;
+    top: 120px;
+    background-color: rgba(77, 77, 77, 0.2);
+    color: whitesmoke;
+    margin-left: 50px;
+    padding: 15px;
+    font-family: 'Barlow', sans-serif;
+    z-index: 3;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+h2{
+    margin-left: 50px;
+}
+/*Los h2 para las secciones*/
+h2.bio {
+    display: block;
+    background-color: rgba(37, 37, 37, 0.541);
+    margin-left: 0px;
+    text-align: center;
+    padding: 10px;
+    font-family: 'Trebuchet MS', sans-serif;
+    color: seashell;
+}
+/*Esto es para la caja gris, para las fechas*/
+h4 > span {
+    color: whitesmoke;
+    font-size: 14px;
+}
+/*Este es el contenedor del iframe de Spotify*/
+.modulo {
+    width: 100%;
+    text-align: center;
+}
+.galeria {
+    text-align: center;
+}
+/*La clase fotositio es de las imgs, y también hay una pseudoclase para cuando uno pase el mouse encima*/
+.fotositio {
+    opacity: 0.3;
+    padding: 6px 3px;
+}
+
+.fotositio:hover {
+    opacity: 1;
+}
+
+h4 {
+    color: white;
+}
+
+footer {
+    background-color: black;
+    padding: 40px;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+/*Acá está el estilo de la "casita" para volver al inicio del sitio, posición fixed para que esté siempre presente y llevado a la derecha*/
+.inicio {
+    position: fixed;
+    bottom: 50px;
+    right: 40px;
+    width: 3%;
+}
+.inicio:hover {
+    position: fixed;
+    bottom: 50px;
+    right: 40px;
+    width: 3%;
+    background-color: red;
+}
+.wk {
+    text-align: right;
+    font-size: 14px;
+    margin-bottom: -30px;
+}
+/*Acá empecé a ordenar las cajas de la sección "Últimos discos". Como tip, para ordenarlos gráficamente a todos le puse borde de distinto color, los dejo como comentarios.*/
+.discouno {
+    display: block;
+    padding: 10px 0px 0px 5px;
+    /*border: solid blue 3px;*/
+}
+.elemento {
+    display: inline-block;
+    /*border: solid red 2px;*/
+    padding: 0px 10px;
+    color:whitesmoke;
+}
+.listado {
+    list-style-type: none;
+    font-size: 14px;
+}
+span.cd {
+    color: gray;
+    font-size: 13px;
+}
+h5 {
+    font-size: 20px;
+    color: whitesmoke;
+    text-align: center;
+    padding-bottom: 10px;
+}
+.temas {
+    /*border: solid green 3px;*/
+    display: flex;
+    align-items: top;
+    padding: 0px;
+}
+.titdisco {
+    /*border: solid yellow 1px;*/
+    padding: 00px 0px 0px 10px;
+}
+.dtres {
+  padding: 10px;
+}
