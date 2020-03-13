@@ -63,7 +63,7 @@ label {
     float: right;
     color: whitesmoke;
 }
-#toggle {
+#cuadrado {
     display: none;
 }
 /*Acá se le dije: "Ojo, cuando la pantalla sea hasta 500 pixeles de ancho, hacé esto: el label (el rótulo de arriba) mostralo, y no solo eso, sino que el menu pasa a ser un bloque y se activa cuando el checkbox está activado, via un clic en el toggle. Para ello, una pseudoclase.*/
